@@ -1,4 +1,4 @@
-cores={"green","blue","yellow"}
+local cores={"green","blue","yellow"}
 for n,cor in ipairs(cores) do
 	minetest.register_node("starwars:stone_with_adegan_"..cor, {
 		description = "Adegan "..cor.." Crystal in Stone",

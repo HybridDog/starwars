@@ -1,5 +1,5 @@
-cores={"green","blue","red", "yellow"}
-function on_off(cor)
+local cores={"green","blue","red", "yellow"}
+local function on_off(cor)
 	for _,player in ipairs(minetest.get_connected_players()) do
 		if player:get_player_control().RMB == true then
 			if player:get_wielded_item():get_name() == "starwars:lightsaberon"..cor then
@@ -12,7 +12,7 @@ function on_off(cor)
 		end
 	end
 end
-function atk(cor)
+local function atk(cor)
 	for _,player in ipairs(minetest.get_connected_players()) do
 		if player:get_player_control().LMB == true and  player:get_wielded_item():get_name() == "starwars:lightsaberon"..cor then
 			minetest.sound_play("starwars_lightsaberatk", {object = minetest.get_player_by_name(player:get_player_name()), gain = 1.0, max_hear_distance = 32, loop = false })
